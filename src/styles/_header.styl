@@ -8,10 +8,12 @@ header
   justify-content: space-between;
   align-items: center; 
   padding: 20px;
+  z-index: 3;
 
   h1 
     font-weight: normal;
     font-size: 30px;
+    z-index: 2;
 
 
   nav 
@@ -19,6 +21,7 @@ header
     list-style: none;
     color: #fefefe;
     text-align: center;
+    z-index: 2;
 
     a   
       color: #fefefe;
@@ -26,7 +29,6 @@ header
       margin-right: 25px;
       position: relative;
       text-decoration: none;
-      z-index: 4;
 
 
       &::after
@@ -86,9 +88,6 @@ header
       a
         font-size: 36px;
         padding: 10px 20%;
-        
-        &:hover 
-          background-color: darken($primaryColor, 40%);
 
 
       &.open
