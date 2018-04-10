@@ -1,0 +1,97 @@
+@import './variables.styl' 
+@import './animations.styl'
+
+header 
+  background-color: $primaryColor;
+  color: #fefefe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 20px;
+
+  h1 
+    font-weight: normal;
+    font-size: 30px;
+
+
+  nav 
+    display: flex;
+    list-style: none;
+    color: #fefefe;
+    text-align: center;
+
+    a   
+      color: #fefefe;
+      font-size: 18px;
+      margin-right: 25px;
+      position: relative;
+      text-decoration: none;
+      z-index: 4;
+
+
+      &::after
+        position: absolute;
+        top: 120%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #fefefe;
+        content: '';
+        opacity: 0;
+        transition: height 300ms, opacity 300ms, transform 300ms;
+        transform: translateY(-10px);
+
+      &:hover::after,
+      &:focus:after 
+        height: 2px;
+        opacity: 1;
+        transform: translateY(1px);
+
+  .mobile-nav 
+    cursor: pointer;
+    display: none;            
+
+
+
+@media screen and (max-width: 700px) 
+  header 
+    padding: 15px;
+
+    h1 
+      font-size: 24px;
+
+    .mobile-nav
+      cursor: pointer;
+      display: inline-block;
+      z-index: 2;
+
+    
+    nav 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: darken($primaryColor, 20%);
+      opacity: 0;
+      padding: 30% 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      transition: transform 600ms ease-in-out, opacity 400ms;
+      height: 100%;
+
+      li 
+        margin-bottom: 15px;
+      a
+        font-size: 36px;
+        padding: 10px 20%;
+        
+        &:hover 
+          background-color: darken($primaryColor, 40%);
+
+
+      &.open
+        opacity: 1;
+        transform: translateX(0);
+
