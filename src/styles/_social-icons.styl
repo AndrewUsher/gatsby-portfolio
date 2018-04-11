@@ -1,0 +1,68 @@
+
+.social-icons-container
+  align-self: flex-end;
+  text-align: center;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+
+  h3
+    color: #fefefe;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 25px;
+
+  .social-icons a
+    box-shadow: 4px 7px 0 rgba(#000, 10%);
+    padding: 10px 15px;
+    color: #fefefe;
+    font-size: 22px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: background-color 300ms;
+
+    &.github
+      background-color: $githubColor;
+
+      &:hover 
+        background-color: darken($githubColor, 30%);
+
+    &.linkedin
+      background-color: $linkedinColor;
+
+      &:hover
+        background-color: darken($linkedinColor, 30%);
+  
+    &.blog
+      background-color: $primaryColor; 
+
+      &:hover 
+        background-color: darken($primaryColor, 30%);
+  
+    &.instagram
+      background-color: $instagramColor;
+
+      &:hover 
+        background-color: darken($instagramColor, 30%);
+
+
+    &.codepen
+      background-color: $codepenColor;
+
+      &:hover
+        background-color: darken($codepenColor, 30%);
+  
+
+
+
+@media screen and (max-width: 700px)
+
+  .social-icons-container
+    color: #f2f2f2;
+
+    .social-icons a
+      clear: both;
+      margin: 10px auto;
+      width: 50%;
+      display: block;
