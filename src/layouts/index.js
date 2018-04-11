@@ -9,8 +9,15 @@ import '../styles/index.styl'
 const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
-      meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
+      title={data.site.siteMetadata.title}
+      meta={[
+        {
+          name: 'description',
+          content:
+            "I am Andrew Usher. I'm a front-end developer focused on crafting clean, friendly, and beautiful user experiences"
+        },
+        { name: 'keywords', content: 'andrew usher, andrew usher developer, andrew usher web developer' }
+      ]}
     />
     <Header title={data.site.siteMetadata.title} />
     <div>{children()}</div>
