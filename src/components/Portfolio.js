@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Portfolio = ({ projects }) => (
+const Portfolio = ({ children, projects }) => (
   <div className="portfolio">
     <h2>My Work</h2>
     <div className="projects-container">
@@ -15,6 +15,7 @@ const Portfolio = ({ projects }) => (
           <p>{project.tags.map(tag => <span className="tag">{tag}</span>)}</p>
         </div>
       ))}
+      {children}
     </div>
   </div>
 )
