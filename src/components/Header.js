@@ -27,16 +27,24 @@ class Header extends Component {
         <h1>{title}</h1>
         <nav className={navIsOpen ? 'open' : ''}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={this.toggleNav}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={this.toggleNav}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/portfolio" onClick={this.toggleNav}>
+              Portfolio
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={this.toggleNav}>
+              Contact
+            </Link>
           </li>
         </nav>
         <a className="mobile-nav" onClick={this.toggleNav}>
