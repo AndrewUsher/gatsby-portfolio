@@ -1,0 +1,83 @@
+@import './variables.styl'
+
+.portfolio
+  background-color: darken($primaryColor, 80%);
+  color: #f2f2f2;
+  padding: 50px 40px;
+
+  h2 
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: center;
+    
+
+  h3,
+  h4, 
+  p 
+    max-width: 850px;
+    width: 90%;
+  
+  h3 
+    font-size: 32px;
+    margin: 10px auto;
+
+    a 
+      color: lighten($primaryColor, 10%);
+      display: inline-block;
+      text-decoration: none;
+      transition: color 300ms, transform 500ms;
+
+      &:hover 
+        color: darken($primaryColor, 10%);
+        transform: translateY(-3px);
+  
+  h4 
+    font-size: 18px;
+    margin: 0 auto 15px auto;
+
+  p 
+    margin: 0 auto;
+
+  span 
+    background-color: lighten($primaryColor, 10%);
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 12px;
+    padding: 5px 10px;
+    margin-bottom: 50px;
+
+    &:hover 
+      background-color: darken($primaryColor, 10%);
+
+@media screen and (max-width: 750px)
+  .portfolio
+    padding: 30px 15px;
+
+    h2 
+      font-size: 42px;
+
+    h3,
+    h4,
+    p 
+      width: 100%; 
+
+    h3 
+      font-size: 28px;
+      margin-bottom: 10px;
+    
+    h4 
+      font-size: 16px;
+      margin-bottom: 15px;
+
+    p 
+      margin-bottom: 30px;
+
+      span 
+        font-size: 15px;
+        margin-bottom: 10px;
+        padding: 4px 8px;
+    
+    
