@@ -112,15 +112,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-stylus',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`
-      }
-    }
-  ]
+  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-stylus']
 }
