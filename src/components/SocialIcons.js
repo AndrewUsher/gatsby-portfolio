@@ -2,7 +2,7 @@ import React from 'react'
 
 const SocialIcons = () => (
   <div className="social-icons-container">
-    <h3>Where to find me</h3>
+    <h3 className="social-icons-title">Where to find me</h3>
     <div className="social-icons">
       <a href="https://www.linkedin.com/in/andrew-usher-125332120/" className="linkedin" target="_blank">
         Linkedin
