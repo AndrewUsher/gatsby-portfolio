@@ -6,7 +6,7 @@ const Portfolio = ({ children, projects }) => (
     <div className="projects-container">
       {projects.map(project => (
         <div className="project">
-          <h3>
+          <h3 className="title">
             <a target="_blank " href={project.liveSite}>
               {project.name}
             </a>
