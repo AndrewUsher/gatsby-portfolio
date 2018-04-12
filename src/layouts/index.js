@@ -9,7 +9,7 @@ import '../styles/index.styl'
 const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title={data.site.siteMetadata.name}
       meta={[
         {
           name: 'description',
@@ -19,7 +19,7 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: 'andrew usher, andrew usher developer, andrew usher web developer' }
       ]}
     />
-    <Header title={data.site.siteMetadata.title} />
+    <Header title={data.site.siteMetadata.name} />
     <div>{children()}</div>
   </div>
 )
@@ -32,7 +32,7 @@ export const query = graphql`
   query LayoutQuery {
     site {
       siteMetadata {
-        title
+        name
       }
     }
   }
