@@ -26,26 +26,18 @@ class Header extends Component {
       <header>
         <h1>{title}</h1>
         <nav className={navIsOpen ? 'open' : 'null'}>
-          <li>
-            <Link to="/" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/portfolio" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
-              Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
-              Contact
-            </Link>
-          </li>
+          <Link to="/" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
+            Home
+          </Link>
+          <Link to="/about" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
+            About
+          </Link>
+          <Link to="/portfolio" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
+            Portfolio
+          </Link>
+          <Link to="/contact" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
+            Contact
+          </Link>
         </nav>
         <a className="mobile-nav" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
           {navIsOpen ? <CloseIcon size={30} /> : <MenuIcon size={30} />}
