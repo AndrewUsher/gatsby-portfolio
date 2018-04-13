@@ -1,0 +1,48 @@
+@import './variables.styl'
+@import './animations.styl'
+
+.not-found
+  align-items: center;
+  background: linear-gradient(
+              darken($primaryColor, 30%),
+              darken($primaryColor, 70%));
+  display: flex;
+  justify-content: center;
+  min-height: 92vh;
+
+  .not-found-box
+    animation-delay: 300ms;
+    animation: slideFromLeft 800ms;
+    background-color: rgba(#f2f2f2, 70%);
+    box-shadow: 3px 8px 0 rgba(#000, 10%);
+    max-width: 700px;
+    padding: 20px 40px;
+    position: relative;
+    top: -70px;
+
+    h2
+      color: darken($primaryColor, 50%);
+      font-size: 50px;
+      margin-bottom: 10px;
+    
+    p 
+      font-size: 24px;
+      margin-bottom: 15px;
+
+    ul 
+      list-style-type: circle;
+      margin-top: 20px;
+      padding-left: 30px;
+
+      li 
+        margin-bottom: 10px;
+
+        a 
+          color: darken($primaryColor, 50%);
+          font-size: 28px;
+          text-decoration: none;
+
+          &:hover 
+            text-decoration: underline;
+
+  
