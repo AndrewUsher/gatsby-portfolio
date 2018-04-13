@@ -25,7 +25,7 @@ class Header extends Component {
     return (
       <header>
         <h1>{title}</h1>
-        <nav className={navIsOpen ? 'open' : ''}>
+        <nav className={navIsOpen ? 'open' : 'null'}>
           <li>
             <Link to="/" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
               Home
