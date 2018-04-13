@@ -15,8 +15,12 @@ class Header extends Component {
   }
 
   toggleNav = () => {
-    this.setState({
-      navIsOpen: !this.state.navIsOpen
+    const nav = document.querySelector('nav')
+    nav.classList.toggle('open')
+    this.setState(prevState => {
+      return {
+        navIsOpen: !prevState.navIsOpen
+      }
     })
   }
   render () {
