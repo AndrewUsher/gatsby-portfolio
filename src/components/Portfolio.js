@@ -5,14 +5,20 @@ const Portfolio = ({ children, projects }) => (
     <h2>My Work</h2>
     <div className="projects-container">
       {projects.map(project => (
-        <div className="project">
+        <div className="project" key={project.id}>
           <h3 className="title">
             <a target="_blank " href={project.liveSite}>
               {project.name}
             </a>
           </h3>
           <h4>{project.description}</h4>
-          <p>{project.tags.map(tag => <span className="tag">{tag}</span>)}</p>
+          <p>
+            {project.tags.map((tag, index) => (
+              <span className="tag" key={index}>
+                {tag}
+              </span>
+            ))}
+          </p>
         </div>
       ))}
       {children}
