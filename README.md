@@ -8,8 +8,8 @@ The instructions below will get you a copy of the project up and running on your
 
 ## Prerequisites
 
-- NPM or Yarn
-- A code editor
+* NPM or Yarn
+* A code editor
 
 ## Install
 
@@ -29,4 +29,6 @@ yarn build
 
 ## Built With
 
-- [Gatsby](https://gatsbyjs.org) - Static site generator
+* [Gatsby](https://gatsbyjs.org) - Static site generator
+* [React Icons](https://gorangajic.github.io/react-icons/) - Popular icons using ES6 import()
+* [Stylus](http://stylus-lang.com/) - CSS Preprocessor
