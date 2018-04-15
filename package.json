@@ -11,7 +11,12 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7"
   },
-  "keywords": ["gatsby", "portfolio", "react", "eslint"],
+  "keywords": [
+    "gatsby",
+    "portfolio",
+    "react",
+    "eslint"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
