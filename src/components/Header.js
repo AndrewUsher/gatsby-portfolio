@@ -5,16 +5,26 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 class Header extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      navIsOpen: false
+    }
+  }
   toggleNav = () => {
-    const nav = document.querySelector('nav')
-    nav.classList.toggle('open')
+    this.setState(prevState => {
+      return {
+        navIsOpen: !prevState.navIsOpen
+      }
+    })
   }
   render () {
     const { title } = this.props
+    const { navIsOpen } = this.state
     return (
       <header>
         <h1>{title}</h1>
-        <nav>
+        <nav className={navIsOpen ? 'open' : ''}>
           <Link to="/" onClick={this.toggleNav} onTouchStart={this.toggleNav}>
             Home
           </Link>
