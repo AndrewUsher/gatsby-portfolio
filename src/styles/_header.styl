@@ -10,6 +10,7 @@ header
   z-index: 3;
 
   h1 
+    animation: nameSlideIn 1200ms;
     font-weight: normal;
     font-size: 30px;
     z-index: 2;
@@ -22,12 +23,16 @@ header
     text-align: center;
     z-index: 2;
 
-    a   
+    a 
+      animation: navFadeIn 4000ms;
       color: #fefefe;
       font-size: 18px;
       margin-right: 25px;
       position: relative;
       text-decoration: none;
+
+      &:last-child
+        margin-right: 0;
 
 
       &::after
@@ -93,3 +98,20 @@ header
         opacity: 1;
         transform: translateX(0);
 
+
+@keyframes nameSlideIn 
+  from 
+    opacity: 0;
+    transform: translateX(-200px);
+
+  to 
+    opacity: 1;
+    transform: translateX(0);
+
+
+@keyframes navFadeIn
+  from 
+    opacity: 0;
+
+  to 
+    opacity: 1;
