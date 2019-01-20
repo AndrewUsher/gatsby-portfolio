@@ -1,41 +1,35 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import graphql from 'graphql'
+import { createGlobalStyle } from 'styled-components'
+import PageContainer from './PageContainer'
 
-import Header from '../components/Header'
-import '../styles/index.styl'
+const GlobalStyles = createGlobalStyle`
+  :root {
+    font-size: 62.5%;
+  }
 
-const TemplateWrapper = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.name}
-      meta={[
-        {
-          name: 'description',
-          content:
-            "I am Andrew Usher. I'm a front-end developer focused on crafting clean, friendly, and beautiful user experiences"
-        },
-        { name: 'keywords', content: 'andrew usher, andrew usher developer, andrew usher web developer' }
-      ]}
-    />
-    <Header title={data.site.siteMetadata.name} />
-    <div>{children()}</div>
-  </div>
-)
+  body {
+    font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+  }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func
-}
-
-export const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        name
-      }
-    }
+  h1 {
+    font-size: 1rem;
+    margin: 0;
   }
 `
+const Layout = ({ children }) => (
+  <Fragment>
+    <GlobalStyles />
+    <PageContainer>{children}</PageContainer>
+  </Fragment>
+)
 
-export default TemplateWrapper
+Layout.propTypes = {
+  children: PropTypes.element.isRequired
+}
+
+export default Layout
