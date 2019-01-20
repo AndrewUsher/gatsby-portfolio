@@ -112,5 +112,5 @@ module.exports = {
       }
     ]
   },
-  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-stylus']
+  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-stylus', 'gatsby-plugin-styled-components']
 }
