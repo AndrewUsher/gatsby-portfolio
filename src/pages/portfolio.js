@@ -1,5 +1,5 @@
 import React from 'react'
-import graphql from 'graphql'
+import { graphql } from 'gatsby'
 import Portfolio from '../components/Portfolio'
 import SocialIcons from '../components/SocialIcons'
 
