@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "author": "Andrew Usher <andrewusher00@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.0.91",
     "gatsby-link": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.5",
