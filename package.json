@@ -9,7 +9,7 @@
     "gatsby-link": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-plugin-stylus": "^2.0.3",
+    "gatsby-plugin-stylus": "^2.1.19",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
